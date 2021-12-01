@@ -1,0 +1,591 @@
+/*bar chart to present the sex distribution on the ship*/
+.header {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+  }
+  
+  .graphno1 {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  body {
+    width: 100%;
+    height: 100%;
+    background-color: #87cefa;
+  }
+  
+  .graphno1 section h2 {
+    color: white;
+  }
+  
+  .graphno1 section h4 {
+    color: #000080;
+  }
+  
+  .graphno1 section .lines {
+    position: absolute;
+    top: 400px;
+    left: 400px;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 200px;
+    background: transparent;
+    border-bottom: 2px solid #e0ffff;
+    border-left: 2px solid #e0ffff;
+    display: flex;
+  }
+  
+  .graphno1 section .lines .ability {
+    position: relative;
+    flex: 2;
+    text-align: center;
+  }
+  
+  .graphno1 section .lines .ability .graph {
+    position: absolute;
+    width: 40px;
+    background: regba(0, 0, 0, 1);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .graphno1 section .lines .ability .graph::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    right: 2px;
+    bottom: 0;
+    background: linear-gradient(#6495ed, #4169e1);
+  }
+ 
+  .graphno1 section .lines .ability .graph::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .graphno1 section .lines .ability .graph .amount {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #5f9ea0;
+  }
+  
+  .graphno1 section .lines .ability .name {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    background: #6a5acd;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  /*pie chart for the number of siblings*/
+  .graphno2 {
+    padding-top: 450px;
+  }
+  
+  .graphno2 h2 {
+    color: white;
+  }
+  
+  .graphno2 h4 {
+    color: #000080;
+  }
+  
+  .graphno2 .piechart {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: conic-gradient(#ffb6c1 0,
+    #ffb6c1 245.05deg,
+    #20b2aa 245.05deg,
+    #20b2aa 332.78deg,
+    #e6e6fa 332.78deg,
+    #e6e6fa 344.3deg,
+    #90ee90 344.3deg,
+    #90ee90 360deg);
+    margin-left: 400px;
+    margin-top: 200px;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+  }
+  
+  #content1 {
+    position: relative;
+    top: 155px;
+    left: 190px;
+    color: #000000;
+  }
+  
+  #content2 {
+    position: relative;
+    top: 110px;
+    left: -35px;
+    color: #000000;
+  }
+  
+  #content3 {
+    position: relative;
+    top: 120px;
+    left: -2px;
+    color: #000000;
+    display: block;
+    transform: rotate(70deg);
+  }
+  
+  #content4 {
+    position: relative;
+    top: 95px;
+    left: 12px;
+    color: #000000;
+    display: block;
+    transform: rotate(77deg);
+  }
+  
+  .numbers .pink {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin: -150px;
+    margin-left: 0px;
+    background-color: #ffb6c1;
+  }
+  
+  .numbers .pink span {
+    position: relative;
+    top: -3px;
+    right: -25px;
+  }
+  
+  .numbers .darkgreen {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin: -150px;
+    margin-left: 50px;
+    background-color: #20b2aa;
+  }
+  
+  .numbers .darkgreen span {
+    position: relative;
+    top: -3px;
+    right: -25px;
+  }
+  
+  .numbers .lavender {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin: -150px;
+    margin-left: 100px;
+    background-color: #e6e6fa;
+  }
+  
+  .numbers .lavender span {
+    position: relative;
+    top: -3px;
+    right: -25px;
+  }
+  
+  .numbers .lightgreen {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin: -150px;
+    margin-left: 150px;
+    background-color: #90ee90;
+  }
+  
+  .numbers .lightgreen span {
+    position: relative;
+    top: -3px;
+    right: -25px;
+  }
+  
+  .numbers {
+    position: absolute;
+    top: 1300px;
+    left: 320px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .numbers span {
+    font-size: 18px;
+    color: #FFFFFF;
+  }
+  
+  /*bar chart for number of parents*/
+  .graphno3 h2 {
+    color: #FFFFFF;
+  }
+  
+  .graphno3 h4 {
+    color: #000080;
+  }
+  
+  .graphno3 p {
+    color: #FFFFFF;
+  }
+  
+  .graph {
+    margin-bottom: 1em;
+    font: normal 100%/150% browallia, calibri, cartogothic;
+  }
+  
+  .graph caption {
+    font: bold 150%/120% browallia, calibri, cartogothic;
+    padding-bottom: 0.33em;
+  }
+  
+  .graph tbody {
+    left: 100px;
+  }
+  
+  .graph tbody th {
+    text-align: right;
+    color: #fff5ee;
+  }
+  
+  @supports (display: grid) {
+    @media (min-width: 30em) {
+      .graph {
+        display: block;
+        width: 500px;
+        height: 300px;
+      }
+  
+      .graph caption {
+        display: block;
+      }
+  
+      .graph thead {
+        display: none;
+      }
+  
+      .graph tbody {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));
+        column-gap: 2%;
+        align-items: end;
+        height: 100%;
+        margin: 3em 0 5em 3em;
+        padding: 0 1em;
+        border-bottom: 2px solid #000000;
+        background: repeating-linear-gradient(180deg,
+            #808080 0,
+            #808080 1px,
+            transparent 1px,
+            transparent 15%);
+      }
+  
+      .graph tbody:before,
+      .graph tbody:after {
+        position: absolute;
+        left: -3.2em;
+        width: 2.8em;
+        text-align: right;
+        font: normal 80%/120% browallia, calibri, cartogothic;
+      }
+  
+      .graph tbody:before {
+        content: "1309";
+        top: -0.5em;
+        color: #FFFFFF;
+      }
+  
+      .graph tbody:after {
+        content: "0";
+        bottom: -0.5em;
+        color: #FFFFFF;
+      }
+  
+      .graph tr {
+        position: relative;
+        display: block;
+      }
+  
+      .graph tr:hover {
+        z-index: 1000;
+      }
+  
+      .graph th,
+      .graph td {
+        display: block;
+        text-align: center;
+      }
+  
+      .graph tbody th {
+        position: absolute;
+        top: -3em;
+        left: 0;
+        width: 100%;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        text-indent: 0;
+        transform: rotate(-45deg);
+      }
+  
+      .graph tbody th:after {
+        content: "";
+      }
+  
+      .graph td {
+        width: 100%;
+        height: 100%;
+        background: #4169E1;
+        border-radius: 0.5em 0.5em 0 0;
+        transition: background 5s;
+      }
+  
+      .graph tr:hover td {
+        opacity: 0.8;
+      }
+  
+      .graph td span {
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        padding: 0.5em 0;
+        margin: -1em 0 0;
+        font: normal 85%/120% browallia, calibri, cartogothic;
+        font-weight: normal;
+        opacity: 0;
+        transition: opacity 0.7s;
+        color: #FFFFFF;
+      }
+  
+      .toggleGraph:checked+table td span,
+      .graph tr:hover td span {
+        width: 4em;
+        margin-left: -2em;
+        opacity: 1;
+      }
+  
+      /*semi circle chart for passengers in each class*/
+      .graphno4 h2 {
+        color: #FFFFFF;
+      }
+  
+      .graphno4 h4 {
+        color: #000080;
+      }
+  
+      .graphno4 .class {
+        margin: 0;
+        margin-left: 200px;
+        margin-bottom: 40px;
+        margin-top: 10px;
+        padding: 0;
+        list-style-type: none;
+      }
+  
+      .graphno4 .class *,
+      .graph4 .class::before {
+        box-sizing: border-box;
+      }
+  
+      .graphno4 .class {
+        position: relative;
+        width: 360px;
+        height: 180px;
+        overflow: hidden;
+      }
+  
+      .graphno4 .class::before {
+        position: absolute;
+      }
+  
+      .graphno4 .class::after {
+        position: absolute;
+      }
+  
+      .graphno4 .class::after {
+        content: 'passengers in each class';
+        left: 50%;
+        bottom: 5px;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        font-weight: normal;
+        color: #FFFAF0;
+      }
+  
+      .graphno4 .class li {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        border: 50px solid;
+        border-top: none;
+        border-bottom-left-radius: 180px;
+        border-bottom-right-radius: 180px;
+        transform-origin: 50% 0;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        animation-fill-mode: forwards;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        backface-visibility: hidden;
+      }
+  
+      .graphno4 .class li:nth-child(1) {
+        z-index: 4;
+        border-color: #DB7093;
+        animation-name: rotate-one;
+      }
+  
+      @keyframes rotate-one {
+        100% {
+          transform: rotate(44.28deg);
+        }
+      }
+  
+      .graphno4 .class li:nth-child(2) {
+        z-index: 3;
+        border-color: #DDA0DD;
+        animation-name: rotate-two;
+      }
+  
+      @keyframes rotate-two {
+        0% {
+          transform: rotate(44.28deg);
+        }
+  
+        100% {
+          transform: rotate(83.09deg);
+        }
+      }
+  
+      .graphno4 .class li:nth-child(3) {
+        z-index: 2;
+        border-color: #FFDAB9;
+        animation-name: rotate-three;
+      }
+  
+      @keyframes rotate-three {
+        0% {
+          transform: rotate(83.09deg);
+        }
+  
+        100% {
+          transform: rotate(180.00deg);
+        }
+  
+        100% {
+          transform: rotate(180deg);
+        }
+      }
+  
+      .graphno4 .class span {
+        position: absolute;
+        font-size: 10px;
+      }
+  
+      .graphno4 .class li:nth-child(1) span {
+        top: 30px;
+        left: 10px;
+        transform: rotate(-44.28deg);
+        color: #DB7093;
+      }
+  
+      .graphno4 .class li:nth-child(2) span {
+        top: 150;
+        left: 30px;
+        transform: rotate (10deg);
+        color: #DDA0DD;
+      }
+  
+      .graphno4 .class li:nth-child(3) span {
+        top: 20px;
+        left: 10px;
+        transform: rotate(-180deg);
+        color: #FFDAB9;
+        font-weight: 900;
+      }
+  
+
+      .graphno5 h2 {
+        color: #FFFFFF
+      }
+  
+      .graphno5 h3 {
+        color: #000080;
+      }
+  
+      #bar{
+        border-radius: 5px;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1.500fr 0.4500fr;
+        width: 70%;
+        height: 70px;
+        text-align: center;
+        font-size: 30px;
+        margin-left: 125px;
+        margin-bottom: 30px;
+        margin-top: 50px;
+      }
+  
+      #Alone {
+        background: #7FFFD4;
+      }
+  
+      #Alone:hover {
+        transition: 0.5s;
+        zoom: 20%;
+      }
+  
+      #Alone:hover #phrase1 {
+        font-size: 150px;
+        margin-top: -45px;
+        color: #6495ED;
+      }
+  
+      #Alone:hover #text1 {
+        font-size: 120px;
+        margin-top: -160px;
+        color: #6495ED;
+      }
+  
+      #Accompanied {
+        background: #FFA07A;
+      }
+  
+      #Accompanied:hover {
+        transition: 0.5s;
+        zoom: 20%;
+      }
+  
+      #Accompanied:hover #phrase2{
+        font-size: 150px;
+        margin-top: -45px;
+        color: #6495ED;
+      }
+  
+      #Accompanied:hover #text2 {
+        font-size: 120px;
+        margin-top: -160px;
+        color: #6495ED;
+      }
+  
+    }  }
